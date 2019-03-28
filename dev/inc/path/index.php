@@ -1,4 +1,5 @@
 <?php
 class Path {
-  const CONTENT_DIR = ABSPATH . 'content';
+  const VIEWS_DIR = ABSPATH . 'views';
+  const PAGES_DIR = self::VIEWS_DIR . '/pages';
 }

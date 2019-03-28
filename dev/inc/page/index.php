@@ -16,8 +16,11 @@ class Page {
     $this->title = $page['title'];
   }
 
+  function output() {
+    include Path::VIEWS_DIR . '/page.php';
+  }
   function output_content() {
-    include Path::CONTENT_DIR . "/$this->name.php";
+    include Path::PAGES_DIR . "/$this->name.php";
   }
 
   static function init() {
