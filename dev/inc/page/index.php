@@ -5,12 +5,14 @@ class Page {
   private static $pages = array();
 
   public $name;
+  public $url;
   public $title;
 
   private function __construct($name) {
     $page = self::$config[$name];
 
-    $this->name = $name;
+    $this->name  = $name;
+    $this->url   = '/' . ($name === 'home' ? '' : $name);
     $this->title = $page['title'];
   }
 
