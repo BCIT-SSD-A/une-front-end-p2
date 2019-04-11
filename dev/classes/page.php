@@ -12,7 +12,7 @@ class Page {
     $page = self::$config[$name];
 
     $this->name  = $name;
-    $this->url   = '/' . ($name === 'home' ? '' : $name);
+    $this->url   = BASE_URL . ($name === 'home' ? '' : $name);
     $this->title = $page['title'];
   }
 
@@ -33,7 +33,6 @@ class Page {
   }
   
   static function get($name = null) {
-    $name = isset($name) ? $name : $_SERVER['REQUEST_URI'];
     $name = self::sanitize_name($name);
 
     if(!isset(self::$pages[$name]))
@@ -43,6 +42,13 @@ class Page {
   }
   
   private static function sanitize_name($name) {
+    // If no name, get from request URI
+    if(!isset($name)) {
+      $name = $_SERVER['REQUEST_URI'];
+      if(stripos($name, BASE_URL) == 0)
+        $name = substr($name, strlen(BASE_URL));
+    }
+    
     $name = trim($name, " \t\n\r\0\x0B/");
     if(empty($name))
       $name = 'home';
