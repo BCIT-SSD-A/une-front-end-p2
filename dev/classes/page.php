@@ -25,7 +25,11 @@ class Page {
 
   static function init() {
     if(!isset(self::$config))
-      self::$config = require __DIR__ . '/config.php';
+      self::$config = require Path::DATA_DIR . '/page.php';
+  }
+
+  static function get_class() {
+    return get_class();
   }
   
   static function get($name = null) {
@@ -48,4 +52,4 @@ class Page {
   }
 }
 
-Page::init();
+return Page::get_class();

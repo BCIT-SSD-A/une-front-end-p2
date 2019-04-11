@@ -20,7 +20,11 @@ class Menu {
 
   static function init() {
     if(!isset(self::$config))
-      self::$config = require __DIR__ . '/config.php';
+      self::$config = require Path::DATA_DIR . '/menu.php';
+  }
+
+  static function get_class() {
+    return get_class();
   }
   
 
@@ -36,4 +40,4 @@ class Menu {
   }
 }
 
-Menu::init();
+return Menu::get_class();
