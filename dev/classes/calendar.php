@@ -10,7 +10,7 @@ class Calendar {
   // State variables (when parsing through dates)
   private $index;
   private $item;
-  private $end_date; // End date of repeated, e.g. March break
+  private $end_date; // End date of repeated item, e.g. March break
 
   function __construct() {
     $this->courses  = self::$config["courses"];
@@ -40,6 +40,9 @@ class Calendar {
     return get_class();
   }
 
+
+  // Returns whether next calendar item exists (true/false),
+  // for when parsing through output
   private function has_next() {
     // If in middle of repeated item, return true
     if($this->index >= 0 && $this->item['date'] < $this->end_date)
@@ -48,6 +51,8 @@ class Calendar {
     // If subsequent items exist
     return isset($this->dates[$this->index + 1]);
   }
+
+  // Returns next calendar item, for when parsing through output
   private function next() {
 
     // If in middle of repeated item
@@ -83,8 +88,12 @@ class Calendar {
 
     return $this->item;
   }
+
+  // Resets parser
   private function reset_parser() {
     $this->index = -1;
+    $this->item = null;
+    $this->end_date = null;
   }
 }
 
