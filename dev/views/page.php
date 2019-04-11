@@ -20,6 +20,7 @@
       <?php $this->output_content(); ?>
     </main>
     <footer>
+      <p>&copy; 2019 Une Simonsen</p>
     </footer>
   </div>
 </body>
