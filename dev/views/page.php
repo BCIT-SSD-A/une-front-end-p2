@@ -10,7 +10,12 @@
 </head>
 <body>
   <div class="page-wrapper">
-    <header class="container navbar">
+    <header class="page-header navbar navbar-expand-md navbar-light">
+      <div class="header-inner">
+        <button class="navbar-toggler" id="header-menu-toggle" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
       <?php
       $header_menu = Menu::get('header');
       echo $header_menu->output(); ?>
@@ -25,5 +30,6 @@
       <p>&copy; 2019 Une Simonsen</p>
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 </html>
