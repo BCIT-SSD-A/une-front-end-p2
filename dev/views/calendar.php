@@ -19,7 +19,7 @@ $last_month = '';
     // New month
     if($month !== $last_month) {
       echo '<section class="month">';
-      echo "<h2>$month</h2>";
+      echo "<h2 class=\"month-title\">$month</h2>";
     }
 
     // Item ?>
