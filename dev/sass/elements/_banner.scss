@@ -1,0 +1,9 @@
+.banner {
+    @include relative;
+    img {
+        width: 100%;
+    }
+    .banner-text {
+        font-size: 2rem;
+    }
+}

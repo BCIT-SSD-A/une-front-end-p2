@@ -9,18 +9,17 @@ if($this->is_404()) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <base href="<?php echo BASE_URL; ?>">
   <title><?php echo $this->title; ?></title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/styles<?php echo ENV_PRODUCTION ? '.min' : '' ?>.css">
+  <link rel="stylesheet" href="<?php echo Path::CSS_URL; ?>/styles<?php echo ENV_PRODUCTION ? '.min' : '' ?>.css">
 </head>
 <body>
   <div class="page-wrapper">
     <header class="page-header navbar navbar-light">
       <div class="header-inner container">
         <div class="header-mobile">
-          <a class="navbar-brand" href="./">
-            <img src="res/images/bcit-ssd-logo.png" alt="BCIT SSD Logo">
+          <a class="navbar-brand" href="<?php echo BASE_URL; ?>">
+            <img src="<?php echo Path::IMAGES_URL; ?>/bcit-ssd-logo.png" alt="BCIT SSD Logo">
           </a>
           <button class="navbar-toggler" id="header-menu-toggle" type="button">
             <span class="navbar-toggler-icon"></span>
@@ -47,6 +46,6 @@ if($this->is_404()) {
       </div>
     </footer>
   </div>
-  <script src="js/script.js"></script>
+  <script src="<?php echo Path::JS_URL; ?>/script.js"></script>
 </body>
 </html>

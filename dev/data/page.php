@@ -7,7 +7,7 @@ return array(
     'title' => 'Program Schedule'
   ),
   'students' => array(
-    'title' => 'Students'
+    'title' => 'Current Students'
   ),
   'staff' => array(
     'title' => 'Staff'
