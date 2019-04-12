@@ -28,11 +28,11 @@ gulp.task('hello', function() {
 
 // Sass Task
 gulp.task('sass', function(){
-	return gulp.src('dev/scss/**/*.scss')
+	return gulp.src('sass/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(sourcemaps.write())
-		.pipe(gulp.dest('dev/styles'))
+		.pipe(gulp.dest('css'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
@@ -40,14 +40,14 @@ gulp.task('sass', function(){
 
 // Autoprefixer Task
 gulp.task('autoprefixer', function() {
-    return gulp.src('dev/scss/**/*.scss')
+    return gulp.src('sass/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
         .pipe(postcss([autoprefixer({browsers: ['ie 8-11','last 2 versions']})]))
         .pipe(sourcemaps.write('/'))
-		.pipe(gulp.dest('dev/styles'))
+		.pipe(gulp.dest('css'))
 		.pipe(browserSync.reload({
 			stream: true
 		}));
@@ -55,23 +55,23 @@ gulp.task('autoprefixer', function() {
 
 // Watch Task
 gulp.task('watch', function(){
-	gulp.watch('dev/scss/**/*.scss', ['sass']);
-	gulp.watch('dev/*.html', browserSync.reload);
-	gulp.watch('dev/scripts/**/*.js', browserSync.reload);
+	gulp.watch('sass/**/*.scss', ['sass']);
+	gulp.watch('*.html', browserSync.reload);
+	gulp.watch('scripts/**/*.js', browserSync.reload);
 });
 
 // Watch Task with Autoprefixer
 gulp.task('watch-autoprefixer', function(){
-	gulp.watch('dev/scss/**/*.scss', ['autoprefixer']);
-	gulp.watch('dev/*.html', browserSync.reload);
-	gulp.watch('dev/scripts/**/*.js', browserSync.reload);
+	gulp.watch('sass/**/*.scss', ['autoprefixer']);
+	gulp.watch('*.html', browserSync.reload);
+	gulp.watch('scripts/**/*.js', browserSync.reload);
 });
 
 // BrowserSync Task
 gulp.task('browserSync', function(){
 	browserSync.init({
 		server: {
-			baseDir: 'dev'
+			baseDir: '/'
 		}
 	});
 });
@@ -81,7 +81,7 @@ gulp.task('compress', function(){
    
     const f = filter(['**/*.css', '**/*.js'], {restore: true});
 
-	return gulp.src('dev/*.html')
+	return gulp.src('*.html')
 		.pipe(useref())
 		.pipe(gulpIf('*.js', minify()))
 		.pipe(gulpIf('*.css', postcss([cssnano()])))
@@ -90,28 +90,28 @@ gulp.task('compress', function(){
 		.pipe(rev())
 		.pipe(f.restore)
 		.pipe(revReplace())
-		.pipe(gulp.dest('dist'));
+		.pipe(gulp.dest('../dist'));
 
 });
 
 // Image Optimization Task
 gulp.task('images', function(){
-	return gulp.src('dev/images/**/*.+(png|jpg|gif|svg)')
+	return gulp.src('res/images/**/*.+(png|jpg|gif|svg)')
 		.pipe(cache(imageMin({
 			interlaced: true
 		})))
-		.pipe(gulp.dest('dist/images'));
+		.pipe(gulp.dest('../dist/res/images'));
 });
 
 // Fonts Task
 gulp.task('fonts', function(){
-	return gulp.src('dev/fonts/**/*')
-		.pipe(gulp.dest('dist/fonts'));
+	return gulp.src('res/fonts/**/*')
+		.pipe(gulp.dest('../dist/res/fonts'));
 });
 
 // Clean Dist Folder Task
 gulp.task('clean:dist', function(){
-	return del.sync('dist');
+	return del.sync('../dist');
 });
 
 // Default Task
@@ -128,14 +128,4 @@ gulp.task('default:autoprefixer', function() {
 gulp.task('build', function(){
 	runSequence('clean:dist', 'autoprefixer', ['compress', 'images', 'fonts']);
 });
-
-
-
-
-
-
-
-
-
-
 
