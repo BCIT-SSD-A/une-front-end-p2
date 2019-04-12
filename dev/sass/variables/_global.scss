@@ -9,3 +9,7 @@ $base-font-family:                  -apple-system, system-ui, BlinkMacSystemFont
 $base-font-weight:                  $weight-regular;
 $base-font-size:                    $size-normal;
 $base-line-height:                  1.15;
+
+// Colors
+$base-color-primary:                map_get(map_get($colors, 'indigo'), 600);
+$base-color-secondary:              map_get(map_get($colors, 'grey'  ), 700);
