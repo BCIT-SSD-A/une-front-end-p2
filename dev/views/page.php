@@ -11,26 +11,34 @@
 <body>
   <div class="page-wrapper">
     <header class="page-header navbar navbar-light">
-      <div class="header-inner">
-        <a class="navbar-brand">
-          <img src="res/images/bcit-ssd-logo.png" alt="BCIT SSD Logo">
-        </a>
-        <button class="navbar-toggler" id="header-menu-toggle" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="header-inner container">
+        <div class="header-mobile">
+          <a class="navbar-brand" href="./">
+            <img src="res/images/bcit-ssd-logo.png" alt="BCIT SSD Logo">
+          </a>
+          <button class="navbar-toggler" id="header-menu-toggle" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <?php
+        $header_menu = Menu::get('header');
+        echo $header_menu->output(); ?>
       </div>
-      <?php
-      $header_menu = Menu::get('header');
-      echo $header_menu->output(); ?>
     </header>
-    <main class="container">
-      <h1 class="page-title">
-        <?php echo $this->title; ?>
-      </h1>
-      <?php $this->output_content(); ?>
+    <main class="page-content">
+      <div class="page-title">
+        <h1 class="container">
+          <?php echo $this->title; ?>
+        </h1>
+      </div>
+      <div class="page-content-inner container">
+        <?php $this->output_content(); ?>
+      </div>
     </main>
-    <footer class="container page-footer">
-      <p>&copy; 2019 Une Simonsen</p>
+    <footer class="page-footer">
+      <div class="container">
+        <p>&copy; 2019 Une Simonsen</p>
+      </div>
     </footer>
   </div>
   <script src="js/script.js"></script>

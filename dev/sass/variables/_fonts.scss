@@ -1,9 +1,14 @@
 // Font weights.
 $weight-light: 100;
 $weight-regular: 400;
-$weight-bold: 500;
+$weight-bold: 700;
 
 // Fonts sizes
 $size-small: 13px;
 $size-normal: 16px;
 $size-large: 19px;
+
+$base-font-family:  -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$base-font-weight:  $weight-regular;
+$base-font-size:    $size-normal;
+$base-line-height:  1.15;

@@ -15,7 +15,7 @@
         float: left;
 
         .row:not(.row--simple) > & {
-            padding-right: $base-spacing;
+            padding-right: $base-spacing-desktop;
 
             &:last-of-type { padding-right: 0; }
         }

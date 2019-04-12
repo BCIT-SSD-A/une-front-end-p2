@@ -1,12 +1,19 @@
 .page-header {
     $_header-height: 80px;
-    $_item-height: 2rem;
+    $_item-height: 2.25rem;
     $_anim-duration: 0.3s;
 
     background-color: $color-bg-secondary;
-    padding: 0 4px;
+    border-bottom: 4px solid $color-border-secondary;
+    padding: 0;
 
     .header-inner {
+        padding: 0 8px;
+        @include device(tablet-small) {
+            padding: 0 16px;
+        }
+    }
+    .header-mobile {
         @include relative;
         height: $_header-height;
         width: 100%;
@@ -30,11 +37,9 @@
         display: block;
         overflow: hidden;
     }
-    .nav-item {
-        font-size: $size-large;
-    }
     .nav-link {
         padding: 0;
+        font-size: $size-large;
         height: 0;
         line-height: $_item-height;
         transition: height 0.3s ease;
@@ -43,12 +48,15 @@
         opacity: 1;
         .nav-link {
             height: $_item-height;
+            border-bottom: 1px solid rgba($color-border-secondary, 0.5);
         }
     }
     @include device(tablet) {
-        @include flexbox;
-        @include align-items(flex-end);
         .header-inner {
+            @include flexbox;
+            @include align-items(flex-end);
+        }
+        .header-mobile {
             width: auto;
             @include flex-grow(1);
         }

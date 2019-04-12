@@ -1,8 +1,8 @@
 <?php
 return array(
   'header' => array(
-    'home' => array(
-      'label' => 'Home'
+    'overview' => array(
+      'label' => 'Overview'
     ),
     'schedule' => array(
       'label' => 'Schedule'
@@ -15,9 +15,6 @@ return array(
     ),
     'resources' => array(
       'label' => 'E-Resources'
-    ),
-    'overview' => array(
-      'label' => 'Program Overview'
-    ),
+    )
   )
 );

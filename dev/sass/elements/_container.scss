@@ -3,5 +3,10 @@
     margin: 0 auto;
     @include relative;
     max-width: 1000px;
-    padding: 0 $base-spacing;
+    padding-left: $base-spacing-mobile;
+    padding-right: $base-spacing-mobile;
+    @include device(tablet-small) {
+        padding-left: $base-spacing-desktop;
+        padding-right: $base-spacing-desktop;
+    }
 }

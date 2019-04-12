@@ -1,0 +1,9 @@
+.page-footer {
+    background-color: $color-bg-secondary;
+    height: 60px;
+    @include flexbox;
+    @include align-items(center);
+    p {
+        margin: 0;
+    }
+}
