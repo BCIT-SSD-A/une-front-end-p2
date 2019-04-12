@@ -1,0 +1,79 @@
+.page-header {
+    $_header-height: 80px;
+    $_item-height: 2rem;
+    $_anim-duration: 0.3s;
+
+    background-color: $color-bg-secondary;
+    padding: 0 4px;
+
+    .header-inner {
+        @include relative;
+        height: $_header-height;
+        width: 100%;
+    }
+    .navbar-brand {
+        height: 100%;
+        img {
+            height: 100%;
+        }
+    }
+    .navbar-toggler {
+        @include absolute(top 50% right 0);
+        transform: translateY(-50%);
+        padding: 0;
+        border: none;
+    }
+    .navbar-toggler-icon {
+        font-size: 2rem;
+    }
+    .collapse {
+        display: block;
+        overflow: hidden;
+    }
+    .nav-item {
+        font-size: $size-large;
+    }
+    .nav-link {
+        padding: 0;
+        height: 0;
+        line-height: $_item-height;
+        transition: height 0.3s ease;
+    }
+    .show {
+        opacity: 1;
+        .nav-link {
+            height: $_item-height;
+        }
+    }
+    @include device(tablet) {
+        @include flexbox;
+        @include align-items(flex-end);
+        .header-inner {
+            width: auto;
+            @include flex-grow(1);
+        }
+        .navbar-toggler {
+            display: none;
+        }
+        .collapse {
+            @include flex(0);
+        }
+        .navbar-nav {
+            @include flexbox;
+            @include flex-dir(row);
+        }
+        .nav-item:not(:last-of-type) {
+            @include flexbox;
+            @include align-items(center);
+            &::after {
+                content: '|';
+                font-size: $size-normal;
+            }
+        }
+        .nav-link, .show .nav-link {
+            height: auto;
+            line-height: normal;
+            padding: 4px 8px;
+        }
+    }
+}

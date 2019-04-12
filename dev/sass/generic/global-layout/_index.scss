@@ -1,0 +1,15 @@
+body {
+    background-color: $color-bg-primary;
+    overflow-y: scroll;
+}
+.page-wrapper {
+    min-height: 100vh;
+    @include flexbox;
+    @include flex-dir(column);
+    > main {
+        @include flex-grow(1);
+    }
+}
+
+@import 'header';
+@import 'footer';

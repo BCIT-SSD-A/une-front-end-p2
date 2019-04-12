@@ -10,8 +10,11 @@
 </head>
 <body>
   <div class="page-wrapper">
-    <header class="page-header navbar navbar-expand-md navbar-light">
+    <header class="page-header navbar navbar-light">
       <div class="header-inner">
+        <a class="navbar-brand">
+          <img src="res/images/bcit-ssd-logo.png" alt="BCIT SSD Logo">
+        </a>
         <button class="navbar-toggler" id="header-menu-toggle" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +29,7 @@
       </h1>
       <?php $this->output_content(); ?>
     </main>
-    <footer class="container">
+    <footer class="container page-footer">
       <p>&copy; 2019 Une Simonsen</p>
     </footer>
   </div>
