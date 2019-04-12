@@ -12,7 +12,7 @@ class Page {
     $page = self::$config[$name];
 
     $this->name  = $name;
-    $this->url   = BASE_URL . ($name === 'home' ? '' : $name);
+    $this->url   = BASE_URL . ($name === 'home' ? '' : $name) . '/';
     $this->title = $page['title'];
   }
 
