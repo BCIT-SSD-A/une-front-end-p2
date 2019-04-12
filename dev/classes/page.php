@@ -22,6 +22,9 @@ class Page {
   function output_content() {
     include Path::PAGES_DIR . "/$this->name.php";
   }
+  function is_404() {
+    return $this->name == '404';
+  }
 
   static function init() {
     if(!isset(self::$config))
