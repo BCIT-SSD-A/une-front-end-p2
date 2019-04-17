@@ -3,7 +3,7 @@
     $_color1: color('blue', '400');
 
     .month-title {
-        background-color: $_color1;
-        color: $white;
+        background-color: $color-bg-ternary;
+        color: $color-fg-ternary;
     }
 }
