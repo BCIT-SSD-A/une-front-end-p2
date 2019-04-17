@@ -1,9 +1,35 @@
 .banner {
+    $_bg-color: $color-bg-ternary;
+
     @include relative;
     img {
         width: 100%;
+
     }
     .banner-text {
-        font-size: 2rem;
+        @include absolute(top 0 right 0 bottom 0 left 0);
+        padding: 0.75rem 1rem;
+        background-color: rgba($_bg-color, 0.7);
+        color: white;
+        font-size: 6vw;
+        font-weight: $weight-bold;
+        @include flexbox;
+        @include flex-dir(column);
+        @include justify-content(center);
+        p {
+            margin-bottom: 4px;
+        }
+        @include device(tablet-small) {
+            font-size: 2.25rem;
+            padding: 3rem;
+        }
+        @include device(tablet) {
+            left: 45%;
+            font-size: 2rem;
+            padding: 1.5rem;
+        }
+        @include device(tablet-wide) {
+            font-size: 2.25rem;
+        }
     }
 }
