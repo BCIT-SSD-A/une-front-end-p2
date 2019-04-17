@@ -1,7 +1,7 @@
 <?php
 $last_month = '';
 ?>
-<div class="calendar">
+<div class="calendar <?php echo $this->view; ?>">
   <?php
   while($this->has_next()) :
     $item = $this->next();

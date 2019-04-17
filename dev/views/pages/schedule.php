@@ -1,3 +1,8 @@
+<button class="btn btn-primary calendar-view-toggle">
+    List View
+</button>
 <?php
-$calendar = new Calendar();
+
+//Output calendar
+$calendar = new Calendar(Calendar::GRID_VIEW);
 $calendar->output();

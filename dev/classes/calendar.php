@@ -1,20 +1,25 @@
 <?php
 class Calendar {
 
+  public const GRID_VIEW = 'grid-view';
+  public const LIST_VIEW = 'list-view';
+
   private static $config;
  
   private $courses;
   private $schedule;
   private $dates;
+  private $view;
 
   // State variables (when parsing through dates)
   private $index;
   private $item;
   private $end_date; // End date of repeated item, e.g. March break
 
-  function __construct() {
+  function __construct($view = null) {
     $this->courses  = self::$config["courses"];
     $this->schedule = self::$config["schedule"];
+    $this->view  = $view == self::LIST_VIEW ? self::LIST_VIEW : self::GRID_VIEW;
     $this->index = -1;
     $this->dates = array_keys($this->get_schedule());
   }
@@ -24,6 +29,9 @@ class Calendar {
   }
   function get_schedule() {
     return $this->schedule;
+  }
+  function get_view() {
+    return $view;
   }
 
   function output() {
