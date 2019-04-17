@@ -8,3 +8,4 @@
   <p>This program is delivered through classroom instruction, hands-on lab work and individual and team projects.</p>
 
   <p>While applicants are not required to have formal computer programming experience, they need to have a solid understanding of object oriented programming as well as possess sound logical and reasoning skills. Applicants with no knowledge are advised to take a programming language course, such as introduction to object-oriented programming, C#, or Java.</p>
+</section>

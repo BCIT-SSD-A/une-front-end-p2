@@ -1,5 +1,10 @@
 <div class="banner">
-    <img src="<?php echo Path::IMAGES_URL; ?>/technology-banner.jpg" alt="Technology Banner">
+    <img src="<?php echo Path::IMAGES_URL; ?>/technology-banner-s.jpg"
+         srcset="<?php echo Path::IMAGES_URL; ?>/technology-banner-l.jpg 1000w,
+                 <?php echo Path::IMAGES_URL; ?>/technology-banner-m.jpg 666w,
+                 <?php echo Path::IMAGES_URL; ?>/technology-banner-s.jpg 450w"
+         sizes="(min-width: 1000px) 1000px, 100vw"
+         alt="Technology Banner">
     <div class="banner-text">
         <p>Code anything from scratch for any sector.</p>
         <p>Be an in-demand software programmer.</p>
