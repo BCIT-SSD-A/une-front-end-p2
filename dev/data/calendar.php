@@ -3,11 +3,11 @@ return array(
   "courses" => array(
     "android" => array(
       "label" => "Android Introduction",
-      "instrucor" => "Paul Mills"
+      "instructor" => "Paul Mills"
     ),
     "angular" => array(
       "label" => "Angular & React.js",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "aws" => array(
       "label" => "AWS Intro",
@@ -26,39 +26,39 @@ return array(
     ),
     "industry_project" => array(
       "label" => "Industry Project",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "interview_skills" => array(
       "label" => "Interview Skills",
-      "instrucor" => "Marlene Delanghe"
+      "instructor" => "Marlene Delanghe"
     ),
     "ios" => array(
       "label" => "iOS Development",
-      "instrucor" => "Phil Weier"
+      "instructor" => "Phil Weier"
     ),
     "java" => array(
       "label" => "Introductory Java Programming",
-      "instrucor" => "Paul Mills"
+      "instructor" => "Paul Mills"
     ),
     "javascript" => array(
       "label" => "JavaScript",
-      "instrucor" => "Jason Harrison"
+      "instructor" => "Jason Harrison"
     ),
     "linq" => array(
       "label" => "C# LINQ and Windows Forms",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "mean" => array(
       "label" => "MEAN (Mongo/ExpressJS/Angular/Node)",
-      "instrucor" => "Medhat Elmasry"
+      "instructor" => "Medhat Elmasry"
     ),
     "mock_interviews" => array(
       "label" => "Mock Interviews",
-      "instrucor" => "Marlene Delanghe/Phil/Pat"
+      "instructor" => "Marlene Delanghe/Phil/Pat"
     ),
     "mvc" => array(
       "label" => "ASP.NET - MVC",
-      "instrucor" => "Phil Weier"
+      "instructor" => "Phil Weier"
     ),
     "oop" => array(
       "label" => "OO Programming in C#",
@@ -73,27 +73,27 @@ return array(
     ),
     "presentation_skills" => array(
       "label" => "Presentation Skills",
-      "instrucor" => "Marlene Delanghe"
+      "instructor" => "Marlene Delanghe"
     ),
     "project1_phase1" => array(
       "label" => "Project 1 - Phase 1",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "project1_phase2" => array(
       "label" => "Project 1 - Phase 2",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "project1_phase3" => array(
       "label" => "Project 1 - Phase 3",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "resume" => array(
       "label" => "Resume Writing Essentials",
-      "instrucor" => "Marlene Delanghe"
+      "instructor" => "Marlene Delanghe"
     ),
     "security" => array(
       "label" => "Web Application Security",
-      "instrucor" => "Pat McGee"
+      "instructor" => "Pat McGee"
     ),
     "system_analysis" => array(
       "label" => "Systems Analysis and Design",
