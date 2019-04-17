@@ -5,5 +5,30 @@
     .month-title {
         background-color: $color-bg-ternary;
         color: $color-fg-ternary;
+        padding: 5px;
+        border-radius: $base-border-radius;
+    }
+    .calendar-item {
+        @include relative;
+        padding-bottom: 24px;
+        border-bottom: 3px solid $color-border-primary;
+        margin-bottom: 6px;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    .item-date {
+        @include absolute(top 0 right 0);
+    }
+    .item-day, .item-date {
+        font-weight: $weight-bold;
+    }
+    .item-course {
+        font-size: $size-large;
+        margin: 4px 0;
+    }
+    .item-room {
+        @include absolute(bottom 4px right 0);
+        font-size: $size-small;
     }
 }

@@ -16,11 +16,18 @@ $last_month = '';
     
     $is_holiday = isset($item['holiday']);
 
-    // New month
-    if($month !== $last_month) {
+    // If new month
+    if($month !== $last_month) :
+      // End previous
+      if($last_month) {
+        echo '</section>';
+      }
+      // Start new month
       echo '<section class="month">';
       echo "<h2 class=\"month-title\">$month</h2>";
-    }
+
+      $last_month = $month;
+    endif;
 
     // Item ?>
     <div class="calendar-item<?php echo $is_holiday ? ' holiday' : ''; ?>">
@@ -46,12 +53,12 @@ $last_month = '';
     </div>
     <?php // End item
 
-    // End month
-    if($month !== $last_month) {
-      echo '</section>';
-      $last_month = $month;
-    }
   endwhile;
+
+  // End of final month
+  if($item) {
+    echo '</section>';
+  }
   ?>
 </div>
 <?php
