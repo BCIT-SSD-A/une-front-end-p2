@@ -1,0 +1,10 @@
+.btn {
+    border-radius: $base-border-radius;
+    font-size: $size-normal;
+    font-weight: $weight-bold;
+}
+.btn-primary {
+    color: $color-fg-ternary;
+    background-color: $color-bg-ternary;
+    border-color: darken($color-bg-ternary, 10%);
+}
