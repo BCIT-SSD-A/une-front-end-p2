@@ -30,6 +30,9 @@
             border-bottom: none;
             background-color: $color-bg-secondary;
             color: $color-fg-secondary;
+            &.holiday {
+                opacity: 0.5;
+            }
             > * {
                 position: static;
                 font-size: $size-small;
