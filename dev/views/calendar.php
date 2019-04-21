@@ -16,6 +16,11 @@ $last_month = '';
     
     $is_holiday = isset($item['holiday']);
 
+    $weekday = array(
+      'pre' => substr($weekday, 0, 3),
+      'suf' => substr($weekday, 3)
+    );
+
     // If new month
     if($month !== $last_month) :
       // End previous
@@ -32,7 +37,10 @@ $last_month = '';
     // Item ?>
     <div class="calendar-item<?php echo $is_holiday ? ' holiday' : ''; ?>">
       <div class="item-day">
-        <?php echo $weekday; ?>
+        <?php echo $weekday['pre'];
+        ?><span class="full"><?php
+          echo $weekday['suf'];
+        ?></span>
       </div>
       <div class="item-date">
         <?php echo $date; ?>
@@ -40,16 +48,15 @@ $last_month = '';
       <div class="item-course">
         <?php echo $course; ?>
       </div>
-      <?php if(isset($instructor)) { ?>
-        <div class="item-instructor">
-          <?php echo $instructor; ?>
-        </div>
-      <?php } ?>
-      <?php if(isset($room)) { ?>
-        <div class="item-room">
-          Room <?php echo $room; ?>
-        </div>
-      <?php } ?>
+      <div class="item-instructor">
+        <?php echo $instructor; ?>
+      </div>
+      <div class="item-room">
+        <?php if(isset($room)) { ?>
+          <span class="full">Room</span>
+          <?php echo $room;
+        } ?>
+      </div>
     </div>
     <?php // End item
 

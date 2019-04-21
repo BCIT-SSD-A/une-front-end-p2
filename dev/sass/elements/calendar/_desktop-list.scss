@@ -1,0 +1,34 @@
+@include device(tablet) {
+    .list-view {
+        .calendar-item {
+            @include flexbox;
+            @include align-items(center);
+            padding: 0;
+            border-bottom-width: 1px;
+            > * {
+                position: static;
+                font-size: $size-normal;
+                font-weight: $weight-regular;
+                margin: 0;
+            }
+        }
+        .item-day {
+            @include flex-basis(8%);
+            .full { display: none; }
+        }
+        .item-date {
+            @include flex-basis(22%);
+        }
+        .item-course {
+            @include flex-basis(45%);
+            font-weight: $weight-bold;
+        }
+        .item-instructor {
+            @include flex-basis(20%);;
+        }
+        .item-room {
+            @include flex-basis(5%);
+            .full { display: none; }
+        }
+    }
+}
