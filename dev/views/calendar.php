@@ -33,7 +33,7 @@ $last_month = '';
       echo '<section class="month">';
       // Title
       echo "<h2 class=\"month-title\">$month</h2>";
-      ?>
+      // Grid/List headers ?>
       <div class="calendar-header grid-header">
         <span class="header-item">Mon</span>
         <span class="header-item">Tue</span>
