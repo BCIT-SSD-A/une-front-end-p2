@@ -7,4 +7,5 @@ class Path {
   const CSS_URL = BASE_URL . 'css';
   const JS_URL = BASE_URL . 'js';
   const IMAGES_URL = BASE_URL . 'res/images';
+  const ICONS_URL = BASE_URL . 'res/icons';
 }

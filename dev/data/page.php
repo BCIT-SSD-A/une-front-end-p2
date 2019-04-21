@@ -3,6 +3,9 @@ return array(
   'home' => array(
     'title' => 'BCIT Software Systems Developer Program'
   ),
+  'overview' => array(
+    'title' => 'Program Overview'
+  ),
   'schedule' => array(
     'title' => 'Program Schedule'
   ),
@@ -15,8 +18,8 @@ return array(
   'resources' => array(
     'title' => 'E-Resources'
   ),
-  'overview' => array(
-    'title' => 'Program Overview'
+  'contact' => array(
+    'title' => 'Contact Us'
   ),
   '404' => array(
     'title' => '404 - Not Found'

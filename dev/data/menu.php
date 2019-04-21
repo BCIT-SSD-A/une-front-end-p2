@@ -15,6 +15,9 @@ return array(
     ),
     'resources' => array(
       'label' => 'E-Resources'
+    ),
+    'contact' => array(
+      'label' => 'Contact'
     )
   )
 );
