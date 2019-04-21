@@ -1,3 +1,4 @@
+// Grid/List Tobble Button
 .calendar-view-toggle {
     display: none;
     @include device(tablet) {
@@ -5,7 +6,6 @@
         width: 8rem;
     }
 }
-
 
 @import 'mobile';
 @import 'desktop-list';

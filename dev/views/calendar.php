@@ -2,27 +2,14 @@
 $last_month = '';
 ?>
 <div class="calendar <?php echo $this->view; ?>">
-  <div class="calendar-header grid-header">
-    <span class="header-item">Mon</span>
-    <span class="header-item">Tue</span>
-    <span class="header-item">Wed</span>
-    <span class="header-item">Thu</span>
-    <span class="header-item">Fri</span>
-  </div>
-  <div class="calendar-header list-header">
-    <span class="header-item-day">Day</span>
-    <span class="header-item-date">Date</span>
-    <span class="header-item-course">Course</span>
-    <span class="header-item-instructor">Instructor</span>
-    <span class="header-item-room">Room</span>
-  </div>
   <?php
   while($this->has_next()) :
     $item = $this->next();
 
-    $month   = $item['date']->format('F');
-    $weekday = $item['date']->format('l');
-    $date    = $item['date']->format('F j, Y');
+    $month    = $item['date']->format('F');
+    $weekday  = $item['date']->format('l');
+    $date     = $item['date']->format('F j, Y');
+    $date_iso = $item['date']->format('Y-m-d');
 
     $course     = $item['course']     ?? $item['holiday'];
     $instructor = $item['instructor'] ?? null;
@@ -43,7 +30,24 @@ $last_month = '';
       }
       // Start new month
       echo '<section class="month">';
+      // Title
       echo "<h2 class=\"month-title\">$month</h2>";
+      ?>
+      <div class="calendar-header grid-header">
+        <span class="header-item">Mon</span>
+        <span class="header-item">Tue</span>
+        <span class="header-item">Wed</span>
+        <span class="header-item">Thu</span>
+        <span class="header-item">Fri</span>
+      </div>
+      <div class="calendar-header list-header">
+        <span class="header-item-day">Day</span>
+        <span class="header-item-date">Date</span>
+        <span class="header-item-course">Course</span>
+        <span class="header-item-instructor">Instructor</span>
+        <span class="header-item-room">Room</span>
+      </div>
+      <?php
 
       // Pad calendar grid with empty days at start of month
       $pad_count = intval($item['date']->format('N')) - 1;
@@ -53,6 +57,7 @@ $last_month = '';
 
       $last_month = $month;
     endif;
+    // End if new month
 
     // Item ?>
     <div class="calendar-item<?php echo $is_holiday ? ' holiday' : ''; ?>">
@@ -63,7 +68,7 @@ $last_month = '';
         ?></span>
       </div>
       <div class="item-date">
-        <?php echo $date; ?>
+        <time datetime="<?php echo $date_iso; ?>"><?php echo $date; ?></time>
       </div>
       <div class="item-course">
         <?php echo $course; ?>
