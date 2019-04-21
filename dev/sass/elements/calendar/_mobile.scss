@@ -21,6 +21,10 @@
         &:last-child {
             border-bottom: none;
         }
+        &.today {
+            background-color: $color-bg-highlight;
+            color: $color-fg-highlight;
+        }
     }
     .item-date {
         @include absolute(top 0 right 0);

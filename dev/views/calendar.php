@@ -16,6 +16,7 @@ $last_month = '';
     $room       = $item['room']       ?? null;
     
     $is_holiday = isset($item['holiday']);
+    $is_today   = $date_iso === date('Y-m-d');
 
     $weekday = array(
       'pre' => substr($weekday, 0, 3),
@@ -60,7 +61,10 @@ $last_month = '';
     // End if new month
 
     // Item ?>
-    <div class="calendar-item<?php echo $is_holiday ? ' holiday' : ''; ?>">
+    <div class="calendar-item<?php
+      echo $is_holiday ? ' holiday' : '';
+      echo $is_today   ? ' today'   : '';
+    ?>">
       <div class="item-day">
         <?php echo $weekday['pre'];
         ?><span class="full"><?php
