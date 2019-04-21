@@ -1,13 +1,22 @@
 @include device(tablet) {
     .grid-view {
-        .month {
+        .grid-header, .month {
             display: grid;
             grid-template-columns: repeat(5, 19%);
             grid-column-gap: 1.25%;
+        }
+        .grid-header {
+            @include relative(top 0.375rem);
+            font-size: $size-large;
+            font-weight: $weight-bold;
+            text-align: center;
+        }
+        .month {
             grid-row-gap: 0.25rem;
+            margin-bottom: 0.5rem;
         }
         .month-title {
-            grid-column-end: span 5; 
+            grid-column-end: span 5;
         }
         @for $count from 1 through 6 {
             .grid-pad-#{$count} {

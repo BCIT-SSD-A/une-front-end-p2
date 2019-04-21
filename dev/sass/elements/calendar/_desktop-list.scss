@@ -1,9 +1,16 @@
 @include device(tablet) {
     .list-view {
-        .calendar-item {
+        .list-header, .calendar-item {
             @include flexbox;
-            @include align-items(center);
             padding: 0 0.5rem;
+        }
+        .list-header {
+            @include relative(top 0.375rem);
+            font-size: $size-large;
+            font-weight: $weight-bold;
+        }
+        .calendar-item {
+            @include align-items(center);
             border-bottom-width: 1px;
             > * {
                 position: static;
@@ -12,20 +19,20 @@
                 margin: 0;
             }
         }
-        .item-day {
+        .item-day, .header-item-day {
             @include flex-basis(8%);
             .full { display: none; }
         }
-        .item-date {
+        .item-date, .header-item-date {
             @include flex-basis(22%);
         }
-        .item-course {
+        .item-course, .header-item-course {
             @include flex-basis(45%);
         }
-        .item-instructor {
+        .item-instructor, .header-item-instructor {
             @include flex-basis(20%);;
         }
-        .item-room {
+        .item-room, .header-item-room {
             @include flex-basis(5%);
             .full { display: none; }
         }

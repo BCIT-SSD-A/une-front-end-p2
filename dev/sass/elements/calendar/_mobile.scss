@@ -2,10 +2,13 @@
 
     $_color1: color('blue', '400');
 
+    .calendar-header {
+        display: none;
+    }
     .month-title {
         background-color: $color-bg-ternary;
         color: $color-fg-ternary;
-        padding: 5px;
+        padding: 0.25rem 0.75rem;
         border-radius: $base-border-radius;
     }
     .calendar-item {

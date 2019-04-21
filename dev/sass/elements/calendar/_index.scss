@@ -1,3 +1,12 @@
+.calendar-view-toggle {
+    display: none;
+    @include device(tablet) {
+        display: block;
+        width: 8rem;
+    }
+}
+
+
 @import 'mobile';
 @import 'desktop-list';
 @import 'desktop-grid';
