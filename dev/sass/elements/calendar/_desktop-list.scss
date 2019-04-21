@@ -3,7 +3,7 @@
         .calendar-item {
             @include flexbox;
             @include align-items(center);
-            padding: 0;
+            padding: 0 0.5rem;
             border-bottom-width: 1px;
             > * {
                 position: static;
@@ -21,7 +21,6 @@
         }
         .item-course {
             @include flex-basis(45%);
-            font-weight: $weight-bold;
         }
         .item-instructor {
             @include flex-basis(20%);;

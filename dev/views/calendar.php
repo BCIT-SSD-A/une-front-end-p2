@@ -31,6 +31,12 @@ $last_month = '';
       echo '<section class="month">';
       echo "<h2 class=\"month-title\">$month</h2>";
 
+      // Pad calendar grid with empty days at start of month
+      $pad_count = intval($item['date']->format('N')) - 1;
+      if($pad_count) {
+        echo "<span class=\"grid-pad grid-pad-$pad_count\"></span>";
+      }
+
       $last_month = $month;
     endif;
 
