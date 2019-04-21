@@ -3,7 +3,6 @@
     display: none;
     @include device(tablet) {
         display: block;
-        width: 8rem;
     }
 }
 

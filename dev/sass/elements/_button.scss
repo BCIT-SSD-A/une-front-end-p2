@@ -1,7 +1,8 @@
 .btn {
     border-radius: $base-border-radius;
-    font-size: $size-normal;
+    font-size: $size-large;
     font-weight: $weight-bold;
+    min-width: 8rem;
 }
 .btn-primary {
     color: $color-fg-ternary;

@@ -1,0 +1,27 @@
+.form {
+    .label-required::after {
+        content: " *";
+        color: color('red', '900');
+    }
+    label:not(.form-check-label) {
+        margin-bottom: 0;
+        font-size: $size-small;
+        @include device(phone-wide) {
+            font-size: $size-normal;
+        }
+        @include device(tablet-small) {
+            margin-bottom: 0.25rem;
+        }
+    }
+    .form-group, .radio-group {
+        margin-bottom: 0.125rem;
+        @include device(phone-wide) {
+            margin-bottom: 0.5rem;
+        }
+    }
+    .submit-container {
+        margin-top: 0.75rem;
+        @include flexbox;
+        @include justify-content(flex-end);
+    }
+}
