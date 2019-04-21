@@ -8,8 +8,10 @@
     .month-title {
         background-color: $color-bg-ternary;
         color: $color-fg-ternary;
+        margin-top: 0.5rem;
         padding: 0.25rem 0.75rem;
         border-radius: $base-border-radius;
+        font-weight: $weight-regular;
     }
     .calendar-item {
         @include relative;
