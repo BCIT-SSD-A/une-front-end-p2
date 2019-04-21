@@ -14,8 +14,8 @@ $column_2 = array_slice($students, $half);
       <?php // For each student in column
       foreach($column as $student) : ?>
         <div class="student list-group-item">
-          <div class="full-name"><?php echo $student->full_name; ?></div>
-          <div class="email">
+          <div class="student-name"><?php echo $student->full_name; ?></div>
+          <div class="student-email">
             <a href="mailto:<?php echo $student->email; ?>"><?php echo $student->email; ?></a>
           </div>
         </div>
