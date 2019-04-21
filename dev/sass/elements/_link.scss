@@ -1,7 +1,7 @@
 a[href] {
-    color: color('cyan', '700');
+    color: color('cyan', '800');
     @include active {
-        color: color('cyan', '400');
+        color: color('cyan', '500');
         text-decoration: none;
     }
 }

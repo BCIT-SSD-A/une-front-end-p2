@@ -21,7 +21,14 @@ return array(
   'contact' => array(
     'title' => 'Contact Us'
   ),
+  'thank-you' => array(
+    'title' => 'Contact Us - Thank you'
+  ),
   '404' => array(
     'title' => '404 - Not Found'
+  ),
+  'process-form' => array(
+    'title' => 'Process Form',
+    'logic_only' => true
   )
 );

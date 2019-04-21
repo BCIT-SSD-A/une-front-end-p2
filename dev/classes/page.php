@@ -7,13 +7,15 @@ class Page {
   public $name;
   public $url;
   public $title;
+  public $is_logic_only;
 
   private function __construct($name) {
     $page = self::$config[$name];
 
     $this->name  = $name;
-    $this->url   = BASE_URL . ($name === 'home' ? '' : $name) . '/';
+    $this->url   = BASE_URL . ($name === 'home' ? '' : $name . '/');
     $this->title = $page['title'];
+    $this->is_logic_only = isset($page['logic_only']) && $page['logic_only'];
   }
 
   function output() {
@@ -50,6 +52,9 @@ class Page {
       $name = $_SERVER['REQUEST_URI'];
       if(stripos($name, BASE_URL) == 0)
         $name = substr($name, strlen(BASE_URL));
+      $queryidx = strpos($name, '?');
+      if($queryidx !== false)
+        $name = substr($name, 0, $queryidx);
     }
     
     $name = trim($name, " \t\n\r\0\x0B/");

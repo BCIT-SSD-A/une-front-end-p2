@@ -2,6 +2,10 @@
 if($this->is_404()) {
   header("HTTP/1.0 404 Not Found");
 }
+// If no output (logic only)
+if($this->is_logic_only) :
+  $this->output_content();
+else :
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,9 +13,7 @@ if($this->is_404()) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" 
-      type="image/x-icon" 
-      href="<?php echo Path::ICONS_URL; ?>/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="<?php echo Path::ICONS_URL; ?>/favicon.ico">
   <title><?php echo $this->title; ?></title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="<?php echo Path::CSS_URL; ?>/styles<?php echo ENV_PRODUCTION ? '.min' : '' ?>.css">
@@ -52,3 +54,5 @@ if($this->is_404()) {
   <script src="<?php echo Path::JS_URL; ?>/script.js"></script>
 </body>
 </html>
+<?php
+endif;

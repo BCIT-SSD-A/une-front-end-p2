@@ -1,4 +1,4 @@
-<form class="contact-form form" method="POST" action="">
+<form class="contact-form form" method="POST" action="<?php echo Page::get('process-form')->url; ?>">
   <div class="form-row">
     <div class="form-group col-sm-6">
       <label for="cf-first-name" class="label-required">First Name</label>
@@ -21,19 +21,19 @@
   </div>
   <div class="cf-type radio-group">
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="type" value="current" id="cf-type-current">
+      <input class="form-check-input" type="radio" name="type" value="current" id="cf-type-current" required />
       <label class="form-check-label" for="cf-type-current">
         Current Student
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="type" value="prospective" id="cf-type-prospective">
+      <input class="form-check-input" type="radio" name="type" value="prospective" id="cf-type-prospective" required />
       <label class="form-check-label" for="cf-type-prospective">
         Prospective Student
       </label>
     </div>
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="type" value="instructor" id="cf-type-instructor">
+      <input class="form-check-input" type="radio" name="type" value="instructor" id="cf-type-instructor" required />
       <label class="form-check-label" for="cf-type-instructor">
         Instructor
       </label>
