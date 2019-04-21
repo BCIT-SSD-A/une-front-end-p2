@@ -650,7 +650,23 @@ return array(
     ),
     "2019-04-15" => array(
       "course" => "industry_project",
-      "end_date" => "2019-05-10"
+      "end_date" => "2019-04-19",
+      "room" => 382
+    ),
+    "2019-04-22" => array(
+      "course" => "industry_project",
+      "end_date" => "2019-04-26",
+      "room" => 360
+    ),
+    "2019-04-29" => array(
+      "course" => "industry_project",
+      "end_date" => "2019-05-03",
+      "room" => 382
+    ),
+    "2019-05-06" => array(
+      "course" => "industry_project",
+      "end_date" => "2019-05-10",
+      "room" => 360
     ),
   ) // End of schedule
 );
