@@ -1,0 +1,11 @@
+.list-group {
+    margin: 0;
+    padding: 0;
+    .list-group-item {
+        margin-bottom: $base-spacing-mobile;
+        padding: 0.375rem 0.75rem;
+        background-color: rgba($color-bg-secondary, 0.85);
+        color: $color-fg-secondary;
+        box-shadow: $base-box-shadow;
+    }
+}

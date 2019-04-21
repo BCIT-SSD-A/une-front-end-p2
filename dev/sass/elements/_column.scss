@@ -1,0 +1,11 @@
+@include device(tablet-small) {
+    .columns {
+        @include flexbox;
+        > .column:not(:last-of-type) {
+            margin-right: $base-spacing-desktop;
+        }
+    }
+    .column {
+        @include flex-grow(1);
+    }
+}

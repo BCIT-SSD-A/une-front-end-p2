@@ -61,3 +61,12 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+
+// On hover/focus/active
+
+@mixin active {
+    &:hover, &:focus, &:active {
+        @content;
+    }
+}

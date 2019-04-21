@@ -15,7 +15,7 @@ h1 {
     }
 }
 h2 {
-    margin: 1rem 0 0.625rem;
+    margin: 0.5rem 0 0.625rem;
     font-weight: $weight-bold;
     font-size: 1.875rem;
     @include device(tablet-small) {
