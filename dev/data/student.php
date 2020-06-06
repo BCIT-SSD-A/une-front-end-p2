@@ -1,4 +1,7 @@
 <?php
+/*
+This is a fictional list of students and no real personal info is included in this list.
+*/
 return array(
     'aaccardo802@my.bcit.ca' => array(
         'first_name' => 'Alison',
